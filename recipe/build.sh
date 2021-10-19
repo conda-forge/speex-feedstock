@@ -1,8 +1,8 @@
 #!/bin/bash
 
-EXTRA_FLAGS="--enable-sse"
-if [[ ${target_platform} == "linux-aarch64" ]]; then
-  EXTRA_FLAGS=""
+EXTRA_FLAGS=""
+if [[ ${target_platform} == "linux-64" ]]; then
+  EXTRA_FLAGS="--enable-sse"
 fi
 
 ./configure --prefix=${PREFIX} $EXTRA_FLAGS
